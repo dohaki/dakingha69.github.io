@@ -1,25 +1,35 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { navigateTo } from 'gatsby-link'
 
-const HorizontalNav = (props) => (
+const HorizontalNav = ({ direction, link, name, onPageLeave }) => (
   <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      width: '100px'
+    style={styles.container}
+    onClick={() => {
+      onPageLeave(name)
+      setTimeout(() => {
+        navigateTo(link)
+      }, 1000)
     }}
   >
     <div
-      style={{
-        transform: (props.direction === 'left')
-          ? 'rotate(90deg)'
-          : 'rotate(270deg)'
-      }}
+    style={{
+      transform: (direction === 'left')
+        ? 'rotate(90deg)'
+        : 'rotate(270deg)'
+    }}
     >
-      <Link to={props.link}>{props.name}</Link>
+      <p>{name}</p>
     </div>
   </div>
 )
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    width: '100px'
+  }
+}
 
 export default HorizontalNav

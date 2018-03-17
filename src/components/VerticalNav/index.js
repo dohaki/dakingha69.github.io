@@ -1,19 +1,30 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { navigateTo } from 'gatsby-link'
 
-const VerticalNav = (props) => (
+const VerticalNav = ({ link, name, onPageLeave }) => (
   <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      height: '100px'
+    style={styles.container}
+    onClick={() => {
+      onPageLeave(name)
+      setTimeout(() => {
+        navigateTo(link)
+      }, 1000)
     }}
   >
-    <div>
-      <Link to={props.link}>{props.name}</Link>
-    </div>
+    <p>{name}</p>
   </div>
 )
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    height: '100px'
+  },
+  name: {
+    
+  }
+}
 
 export default VerticalNav
