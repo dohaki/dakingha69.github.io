@@ -11,7 +11,7 @@ const VerticalNav = ({ link, name, onPageLeave }) => (
       }, 1000)
     }}
   >
-    <p>{name}</p>
+    <p className='link'>{name}</p>
   </div>
 )
 

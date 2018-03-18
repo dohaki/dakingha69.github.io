@@ -12,13 +12,13 @@ const HorizontalNav = ({ direction, link, name, onPageLeave }) => (
     }}
   >
     <div
-    style={{
-      transform: (direction === 'left')
-        ? 'rotate(90deg)'
-        : 'rotate(270deg)'
-    }}
+      style={{
+        transform: (direction === 'left')
+          ? 'rotate(90deg)'
+          : 'rotate(270deg)'
+      }}
     >
-      <p>{name}</p>
+      <p className='link'>{name}</p>
     </div>
   </div>
 )

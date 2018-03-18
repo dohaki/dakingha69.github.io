@@ -628,3 +628,17 @@ pre tt:after {
 #___gatsby {
   height: 100% !important;
 }
+
+/* custom styles */
+.link {
+  letter-spacing: 0px;
+  -webkit-transition: letter-spacing 1s; /* Safari */
+  transition: letter-spacing 1s;
+}
+.link:hover {
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.pointer:hover {
+  cursor: pointer;
+}

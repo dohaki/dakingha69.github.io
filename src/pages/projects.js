@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Transition from 'react-transition-group/Transition'
 
-import BackHeader from '../components/BackHeader'
-
 class AboutPage extends Component {
   state = {
     in: false
@@ -21,12 +19,9 @@ class AboutPage extends Component {
             ...defaultStyle,
             ...transitionStyles[state]
           }}>
-            <BackHeader />
-            <div style={styles.container}>
-              <h1>ABOUT</h1>
-              <p>Welcome to page 2</p>
-              <Link to="/">Go back to the homepage</Link>
-            </div>
+            <h1>ABOUT</h1>
+            <p>Welcome to page 2</p>
+            <Link to="/">Go back to the homepage</Link>
           </div>
         )}
       </Transition>
@@ -36,18 +31,17 @@ class AboutPage extends Component {
 
 const defaultStyle = {
   transition: `opacity 500ms`,
-  opacity: 0
+  opacity: 0,
+  padding: 20,
+  display: 'inline-block',
+  backgroundColor: '#8787d8'
 }
 
 const transitionStyles = {
   entering: { opacity: 0 },
-  entered: { opacity: 1 }
-}
-
-const styles = {
-  container: {
-
-  }
+  entered: { opacity: 1 },
+  exiting: {},
+  exited: {}
 }
 
 export default AboutPage

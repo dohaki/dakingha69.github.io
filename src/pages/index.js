@@ -43,7 +43,7 @@ class IndexPage extends Component {
             >
               <HorizontalNav
                 direction='left'
-                link='/page-2/'
+                link='/cv/'
                 name='CV'
                 onPageLeave={this.handlePageLeave.bind(this)}
               />
@@ -52,13 +52,13 @@ class IndexPage extends Component {
               </div>
               <HorizontalNav
                 direction='right'
-                link='/page-2/'
+                link='/projects/'
                 name='PROJECTS'
                 onPageLeave={this.handlePageLeave.bind(this)}
               />
             </div>
             <VerticalNav
-              link='/page-2/'
+              link='/contact/'
               name='CONTACT'
               onPageLeave={this.handlePageLeave.bind(this)}
             />
