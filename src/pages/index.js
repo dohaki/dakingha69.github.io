@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link'
 import Transition from 'react-transition-group/Transition'
 
 import HorizontalNav from '../components/HorizontalNav'
