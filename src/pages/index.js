@@ -7,7 +7,20 @@ import VerticalNav from '../components/VerticalNav'
 class IndexPage extends Component {
   state = {
     inTransition: false,
-    nextPageName: 'home'
+    nextPageName: 'home',
+    subTitles: [
+      'Fullstack Developer.',
+      'Blockchain Enthusiast.',
+      'Master Student TU Berlin.'
+    ],
+    subTitle: '',
+    titleIndex: 0,
+    charIndex: 0,
+    isDeleting: false
+  }
+
+  componentDidMount() {
+    this.typeWriter()
   }
 
   handlePageLeave(name) {
@@ -15,6 +28,42 @@ class IndexPage extends Component {
       inTransition: true,
       nextPageName: name.toLowerCase()
     })
+  }
+
+  typeWriter() {
+    let {
+      charIndex,
+      titleIndex,
+      subTitles,
+      subTitle,
+      isDeleting,
+    } = this.state
+    let timeout = 100
+    if (charIndex < 0) {
+      isDeleting = false
+      subTitle = ''
+      charIndex = 0
+      titleIndex = (titleIndex + 1) % subTitles.length
+    } else if (charIndex < subTitles[titleIndex].length) {
+      if (!isDeleting) {
+        subTitle += subTitles[titleIndex].charAt(charIndex)
+        charIndex++
+      } else {
+        subTitle = subTitles[titleIndex].slice(0, subTitle.length - 1)
+        charIndex--
+      }
+    } else {
+      isDeleting = true
+      charIndex--
+      timeout = 1000
+    }
+    this.setState({
+      subTitle,
+      charIndex,
+      titleIndex,
+      isDeleting
+    })
+    setTimeout(() => this.typeWriter(), timeout)
   }
 
   render() {
@@ -48,6 +97,10 @@ class IndexPage extends Component {
               />
               <div>
                 <h1>DH.Kim</h1>
+                <p>
+                  {this.state.subTitle}
+                  <span className='blinking-cursor'>|</span>
+                </p>
               </div>
               <HorizontalNav
                 direction='right'
