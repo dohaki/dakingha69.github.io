@@ -23,7 +23,7 @@ const styles = {
     padding: '10px'
   },
   arrow: {
-    fontSize: '50px'
+    fontSize: '40px'
   }
 }
 

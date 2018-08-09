@@ -23,9 +23,10 @@ class AboutPage extends Component {
           }}>
             <BackHeader />
             <div style={styles.container}>
-              <h1>ABOUT</h1>
-              <p>Welcome to page 2</p>
-              <Link to="/">Go back to the homepage</Link>
+              <h1>Hello world!</h1>
+              <div class="textContainer">
+                <p>My name is Dong-Ha Kim and I am a Fullstack Developer, Blockchain Enthusiast and M.Sc. Student at the Technical University Berlin.</p>
+              </div>
             </div>
           </div>
         )}
@@ -46,7 +47,7 @@ const transitionStyles = {
 
 const styles = {
   container: {
-
+    textAlign: 'center'
   }
 }
 
