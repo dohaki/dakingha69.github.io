@@ -23,6 +23,10 @@ class IndexPage extends Component {
     this.typeWriter()
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.timeout)
+  }
+
   handlePageLeave(name) {
     this.setState({
       inTransition: true,
@@ -63,7 +67,7 @@ class IndexPage extends Component {
       titleIndex,
       isDeleting
     })
-    setTimeout(() => this.typeWriter(), timeout)
+    this.timeout = setTimeout(() => this.typeWriter(), timeout)
   }
 
   render() {
