@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link'
 import Transition from 'react-transition-group/Transition'
 
 import BackHeader from '../components/BackHeader'
@@ -25,7 +24,13 @@ class AboutPage extends Component {
             <div style={styles.container}>
               <h1>Hello world!</h1>
               <div class="textContainer">
-                <p>My name is Dong-Ha Kim and I am a Fullstack Developer, Blockchain Enthusiast and M.Sc. Student at the Technical University Berlin.</p>
+                <p>My name is Dong-Ha Kim and I am a Fullstack Developer, Blockchain Enthusiast and M. Sc. Student.</p>
+                <iframe src="https://giphy.com/embed/MGdfeiKtEiEPS" width="480" height="330" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <p>I love writing applications - from prototypes to production ready.</p>
+                <iframe src="https://giphy.com/embed/l1J9BjdexFdonLU5O" width="480" height="264" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <p>I am also a BIG fan and believer of blockchain technology, especially Ethereum &hearts;</p>
+                <iframe src="https://giphy.com/embed/IPbS5R4fSUl5S" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <p>Besides working at a blockchain company to drive mainstream adoption of the technology further, I am also doing my Master of Science in Information Systems Management at the Technical University of Berlin.</p>
               </div>
             </div>
           </div>
