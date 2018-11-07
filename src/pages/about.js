@@ -23,14 +23,16 @@ class AboutPage extends Component {
             <BackHeader />
             <div style={styles.container}>
               <h1>Hello world!</h1>
-              <div class="textContainer">
-                <p>My name is Dong-Ha Kim and I am a Fullstack Developer, Blockchain Enthusiast and M. Sc. Student.</p>
-                <iframe src="https://giphy.com/embed/MGdfeiKtEiEPS" width="480" height="330" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+              <div style={styles.textContainer}>
+                <p>
+                  My name is Dong-Ha Kim and I am a
+                  <p/>
+                  <div>Fullstack Developer</div>
+                  <div>Blockchain Enthusiast</div>
+                  <div>M. Sc. Information Systems Management Student</div>
+                </p>
                 <p>I love writing applications - from prototypes to production ready.</p>
-                <iframe src="https://giphy.com/embed/l1J9BjdexFdonLU5O" width="480" height="264" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                 <p>I am also a BIG fan and believer of blockchain technology, especially Ethereum &hearts;</p>
-                <iframe src="https://giphy.com/embed/IPbS5R4fSUl5S" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                <p>Besides working at a blockchain company to drive mainstream adoption of the technology further, I am also doing my Master of Science in Information Systems Management at the Technical University of Berlin.</p>
               </div>
             </div>
           </div>
@@ -53,6 +55,9 @@ const transitionStyles = {
 const styles = {
   container: {
     textAlign: 'center'
+  },
+  textContainer: {
+    
   }
 }
 
