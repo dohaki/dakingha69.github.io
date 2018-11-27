@@ -1,10 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import './index.css'
 
-const TemplateWrapper = ({ children }) => (
+const Layout = ({ children }) => (
   <div
     style={{
       height: '100%'
@@ -22,13 +21,9 @@ const TemplateWrapper = ({ children }) => (
         height: '100%'
       }}
     >
-      {children()}
+      {children}
     </div>
   </div>
 )
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
-
-export default TemplateWrapper
+export default Layout

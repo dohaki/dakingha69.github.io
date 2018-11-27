@@ -1,13 +1,13 @@
 import React from 'react'
 import { navigateTo } from 'gatsby-link'
-import ArrowLeft from 'react-icons/lib/ti/arrow-left'
+import { TiArrowLeft } from 'react-icons/ti'
 
 const BackHeader = ({ direction, link, name, onPageLeave }) => (
   <div
     style={styles.container}
     onClick={() => navigateTo('/')}
   >
-    <ArrowLeft
+    <TiArrowLeft
       className='pointer'
       style={styles.arrow}
     />

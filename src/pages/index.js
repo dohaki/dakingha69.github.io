@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Transition from 'react-transition-group/Transition'
 
+import Layout from '../components/Layout'
 import HorizontalNav from '../components/HorizontalNav'
 import VerticalNav from '../components/VerticalNav'
 
@@ -74,53 +75,55 @@ class IndexPage extends Component {
     const { inTransition, nextPageName } = this.state
 
     return (
-      <Transition in={inTransition} timeout={500}>
-        {state => (
-          <div style={{
-            ...defaultStyle,
-            ...transitionStyles[nextPageName][state]
-          }}
-          >
-            <VerticalNav
-              link='/about/'
-              name='ABOUT'
-              onPageLeave={this.handlePageLeave.bind(this)}
-            />
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-              }}
+      <Layout>
+        <Transition in={inTransition} timeout={500}>
+          {state => (
+            <div style={{
+              ...defaultStyle,
+              ...transitionStyles[nextPageName][state]
+            }}
             >
-              <HorizontalNav
-                direction='left'
-                link='/cv/'
-                name='CV'
+              <VerticalNav
+                link='/about/'
+                name='ABOUT'
                 onPageLeave={this.handlePageLeave.bind(this)}
               />
-              <div>
-                <h1>DH.Kim</h1>
-                <p>
-                  {this.state.subTitle}
-                  <span className='blinking-cursor'>|</span>
-                </p>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <HorizontalNav
+                  direction='left'
+                  link='/cv/'
+                  name='CV'
+                  onPageLeave={this.handlePageLeave.bind(this)}
+                />
+                <div>
+                  <h1>DH.Kim</h1>
+                  <p>
+                    {this.state.subTitle}
+                    <span className='blinking-cursor'>|</span>
+                  </p>
+                </div>
+                <HorizontalNav
+                  direction='right'
+                  link='/projects/'
+                  name='PROJECTS'
+                  onPageLeave={this.handlePageLeave.bind(this)}
+                />
               </div>
-              <HorizontalNav
-                direction='right'
-                link='/projects/'
-                name='PROJECTS'
+              <VerticalNav
+                link='/contact/'
+                name='CONTACT'
                 onPageLeave={this.handlePageLeave.bind(this)}
               />
             </div>
-            <VerticalNav
-              link='/contact/'
-              name='CONTACT'
-              onPageLeave={this.handlePageLeave.bind(this)}
-            />
-          </div>
-        )}
-      </Transition>
+          )}
+        </Transition>
+      </Layout>
     )
   }
 }
