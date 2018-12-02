@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Transition from 'react-transition-group/Transition'
+import Typist from 'react-typist'
 
 import Layout from '../components/Layout'
 import HorizontalNav from '../components/HorizontalNav'
@@ -10,83 +11,35 @@ class IndexPage extends Component {
     inTransition: false,
     nextPageName: 'home',
     subTitles: [
-      'Fullstack Developer.',
+      'Master Student TU Berlin.',
       'Blockchain Enthusiast.',
-      'Master Student TU Berlin.'
-    ],
-    subTitle: '',
-    titleIndex: 0,
-    charIndex: 0,
-    isDeleting: false
+      'Fullstack Developer.',
+    ]
   }
 
-  componentDidMount() {
-    this.typeWriter()
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.timeout)
-  }
-
-  handlePageLeave(name) {
+  handlePageLeave = (name) => {
     this.setState({
       inTransition: true,
       nextPageName: name.toLowerCase()
     })
   }
 
-  typeWriter() {
-    let {
-      charIndex,
-      titleIndex,
-      subTitles,
-      subTitle,
-      isDeleting,
-    } = this.state
-    let timeout = 100
-    if (charIndex < 0) {
-      isDeleting = false
-      subTitle = ''
-      charIndex = 0
-      titleIndex = (titleIndex + 1) % subTitles.length
-    } else if (charIndex < subTitles[titleIndex].length) {
-      if (!isDeleting) {
-        subTitle += subTitles[titleIndex].charAt(charIndex)
-        charIndex++
-      } else {
-        subTitle = subTitles[titleIndex].slice(0, subTitle.length - 1)
-        charIndex--
-      }
-    } else {
-      isDeleting = true
-      charIndex--
-      timeout = 1000
-    }
-    this.setState({
-      subTitle,
-      charIndex,
-      titleIndex,
-      isDeleting
-    })
-    this.timeout = setTimeout(() => this.typeWriter(), timeout)
-  }
-
   render() {
-    const { inTransition, nextPageName } = this.state
-
     return (
       <Layout>
-        <Transition in={inTransition} timeout={500}>
+        <Transition
+          in={this.state.inTransition}
+          timeout={500}
+        >
           {state => (
             <div style={{
               ...defaultStyle,
-              ...transitionStyles[nextPageName][state]
-            }}
-            >
+              ...transitionStyles[this.state.nextPageName][state]
+            }}>
               <VerticalNav
-                link='/about/'
+                link='/about'
                 name='ABOUT'
-                onPageLeave={this.handlePageLeave.bind(this)}
+                onPageLeave={this.handlePageLeave}
               />
               <div
                 style={{
@@ -97,28 +50,32 @@ class IndexPage extends Component {
               >
                 <HorizontalNav
                   direction='left'
-                  link='/cv/'
-                  name='CV'
-                  onPageLeave={this.handlePageLeave.bind(this)}
+                  link='/contact'
+                  name='CONTACT'
+                  onPageLeave={this.handlePageLeave}
                 />
                 <div>
                   <h1>DH.Kim</h1>
-                  <p>
-                    {this.state.subTitle}
-                    <span className='blinking-cursor'>|</span>
-                  </p>
+                  <Typist avgTypingDelay={150}>
+                    {this.state.subTitles.map(subTitle => (
+                      <div key={subTitle}>
+                        <span>{subTitle}</span>
+                        <Typist.Backspace count={subTitle.length} delay={2000} />
+                      </div>
+                    ))}
+                  </Typist>
                 </div>
                 <HorizontalNav
                   direction='right'
-                  link='/projects/'
+                  link='/projects'
                   name='PROJECTS'
-                  onPageLeave={this.handlePageLeave.bind(this)}
+                  onPageLeave={this.handlePageLeave}
                 />
               </div>
               <VerticalNav
-                link='/contact/'
-                name='CONTACT'
-                onPageLeave={this.handlePageLeave.bind(this)}
+                link='/blog'
+                name='BLOG'
+                onPageLeave={this.handlePageLeave}
               />
             </div>
           )}
@@ -148,7 +105,7 @@ const transitionStyles = {
       opacity: 0
     }
   },
-  cv: {
+  contact: {
     entering: {
       marginLeft: '500px',
       marginRight: '-500px',
@@ -182,7 +139,7 @@ const transitionStyles = {
       opacity: 0
     }
   },
-  contact: {
+  blog: {
     entering: {
       marginTop: '-500px',
       opacity: 1

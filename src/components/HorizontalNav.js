@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigateTo } from 'gatsby-link'
+import { navigate } from 'gatsby-link'
 
 const HorizontalNav = ({ direction, link, name, onPageLeave }) => (
   <div
@@ -7,11 +7,12 @@ const HorizontalNav = ({ direction, link, name, onPageLeave }) => (
     onClick={() => {
       onPageLeave(name)
       setTimeout(() => {
-        navigateTo(link)
+        navigate(link)
       }, 1000)
     }}
   >
     <div
+      className="rotated-link"
       style={{
         transform: (direction === 'left')
           ? 'rotate(90deg)'
@@ -21,7 +22,7 @@ const HorizontalNav = ({ direction, link, name, onPageLeave }) => (
       <p className='link'>{name}</p>
     </div>
   </div>
-)
+);
 
 const styles = {
   container: {

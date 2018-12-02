@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigateTo } from 'gatsby-link'
+import { navigate } from 'gatsby-link'
 
 const VerticalNav = ({ link, name, onPageLeave }) => (
   <div
@@ -7,7 +7,7 @@ const VerticalNav = ({ link, name, onPageLeave }) => (
     onClick={() => {
       onPageLeave(name)
       setTimeout(() => {
-        navigateTo(link)
+        navigate(link)
       }, 1000)
     }}
   >
