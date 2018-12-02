@@ -1,58 +1,15 @@
-import React, { Component } from 'react'
-import Transition from 'react-transition-group/Transition'
+import React from 'react';
 
-import Layout from '../components/Layout'
-import TopNav from '../components/TopNav'
+import PageTemplate from '../components/PageTemplate';
 
-class AboutPage extends Component {
-  state = {
-    in: false
-  }
+const ContactPage = () => {
+  return (
+    <PageTemplate
+      title="Contact me"
+    >
 
-  componentDidMount() {
-    this.setState({ in: true })
-  }
-
-  render() {
-    return (
-      <Layout>
-        <Transition in={this.state.in} timeout={100}>
-          {state => (
-            <div style={{
-              ...defaultStyle,
-              ...transitionStyles[state]
-            }}>
-              <TopNav />
-              <div style={styles.container}>
-                <h1>Contact</h1>
-                <div class="textContainer">
-                </div>
-              </div>
-            </div>
-          )}
-        </Transition>
-      </Layout>
-    )
-  }
+    </PageTemplate>
+  );
 }
-
-const defaultStyle = {
-  transition: `opacity 500ms`,
-  opacity: 0,
-  padding: 20
-}
-
-const transitionStyles = {
-  entering: { opacity: 0 },
-  entered: { opacity: 1 },
-  exiting: {},
-  exited: {}
-}
-
-const styles = {
-  container: {
-    textAlign: 'center'
-  }
-}
-
-export default AboutPage
+ 
+export default ContactPage;
