@@ -1,36 +1,26 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
+import React from 'react';
+import { navigate } from 'gatsby-link';
+import { Box } from 'grommet';
+
+import RotatedAnchor from './RotatedAnchor';
 
 const HorizontalNav = ({ direction, link, name, onPageLeave }) => (
-  <div
-    style={styles.container}
-    onClick={() => {
-      onPageLeave(name)
-      setTimeout(() => {
-        navigate(link)
-      }, 1000)
-    }}
+  <Box
+    justify="center"
+    width="xsmall"
   >
-    <div
-      className="rotated-link"
-      style={{
-        transform: (direction === 'left')
-          ? 'rotate(90deg)'
-          : 'rotate(270deg)'
+    <RotatedAnchor
+      direction={direction}
+      color="dark-1"
+      label={name}
+      onClick={() => {
+        onPageLeave(name);
+        setTimeout(() => {
+          navigate(link);
+        }, 1000);
       }}
-    >
-      <p className='link'>{name}</p>
-    </div>
-  </div>
+    />
+  </Box>  
 );
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    width: '100px'
-  }
-}
-
-export default HorizontalNav
+export default HorizontalNav;

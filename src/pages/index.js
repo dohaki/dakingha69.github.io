@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Heading } from 'grommet'
 import Transition from 'react-transition-group/Transition'
 import Typist from 'react-typist'
 
@@ -45,7 +46,7 @@ class IndexPage extends Component {
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
-                  justifyContent: 'space-between',
+                  justifyContent: 'space-evenly',
                 }}
               >
                 <HorizontalNav
@@ -55,8 +56,11 @@ class IndexPage extends Component {
                   onPageLeave={this.handlePageLeave}
                 />
                 <div>
-                  <h1>DH.Kim</h1>
-                  <Typist avgTypingDelay={150}>
+                  <Heading>DH.Kim</Heading>
+                  <Typist
+                    cursor={{ show: false }}
+                    avgTypingDelay={100}
+                  >
                     {this.state.subTitles.map(subTitle => (
                       <div key={subTitle}>
                         <span>{subTitle}</span>

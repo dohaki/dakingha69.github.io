@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Transition from 'react-transition-group/Transition'
 
 import Layout from '../components/Layout'
-import BackHeader from '../components/BackHeader'
+import TopNav from '../components/TopNav'
 
 class AboutPage extends Component {
   state = {
@@ -22,7 +22,7 @@ class AboutPage extends Component {
               ...defaultStyle,
               ...transitionStyles[state]
             }}>
-              <BackHeader />
+              <TopNav />
               <div style={styles.container}>
                 <h1>Contact</h1>
                 <div class="textContainer">

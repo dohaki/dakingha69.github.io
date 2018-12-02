@@ -1,30 +1,23 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
+import React from 'react';
+import { navigate } from 'gatsby-link';
+import { Anchor, Box } from 'grommet';
 
 const VerticalNav = ({ link, name, onPageLeave }) => (
-  <div
-    style={styles.container}
-    onClick={() => {
-      onPageLeave(name)
-      setTimeout(() => {
-        navigate(link)
-      }, 1000)
-    }}
+  <Box
+    justify="center"
+    pad="medium"
   >
-    <p className='link'>{name}</p>
-  </div>
-)
+    <Anchor
+      color="dark-1"
+      label={name}
+      onClick={() => {
+        onPageLeave(name);
+        setTimeout(() => {
+          navigate(link);
+        }, 1000);
+      }}
+    />
+  </Box>
+);
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    height: '100px'
-  },
-  name: {
-    
-  }
-}
-
-export default VerticalNav
+export default VerticalNav;

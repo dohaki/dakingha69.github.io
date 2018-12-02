@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Transition from 'react-transition-group/Transition'
 
+import TopNav from '../components/TopNav'
 import Layout from '../components/Layout'
 
 class AboutPage extends Component {
