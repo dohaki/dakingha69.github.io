@@ -10,6 +10,6 @@ const ContactPage = () => {
 
     </PageTemplate>
   );
-}
+};
  
 export default ContactPage;

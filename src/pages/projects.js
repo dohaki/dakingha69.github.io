@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box, Heading } from 'grommet';
 
 import PageTemplate from '../components/PageTemplate';
 

@@ -16,6 +16,6 @@ const PageTemplate = ({ title, children }) => {
       </Box>
     </Layout>
   );
-}
+};
  
 export default PageTemplate;

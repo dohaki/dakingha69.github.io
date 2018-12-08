@@ -18,7 +18,11 @@ const AboutPage = () => (
       .
     </Paragraph>
     <Paragraph alignSelf="center">
-      Some more things I like are FOOD 😋, TECHNO 🕺, GAMES 🎮 and CATS 🐱.
+      Some more things I like are
+      FOOD <span role="img" aria-label="food">😋</span>,
+      TECHNO <span role="img" aria-label="dance">🕺</span>,
+      GAMES <span role="img" aria-label="game">🎮</span>
+      and CATS <span role="img" aria-label="cats">🐱</span>.
     </Paragraph>
   </PageTemplate>
 );

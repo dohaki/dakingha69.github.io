@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import { Heading } from 'grommet'
-import Transition from 'react-transition-group/Transition'
-import Typist from 'react-typist'
+import React, { Component } from 'react';
+import { Heading } from 'grommet';
+import Transition from 'react-transition-group/Transition';
+import Typist from 'react-typist';
 
-import Layout from '../components/Layout'
-import HorizontalNav from '../components/HorizontalNav'
-import VerticalNav from '../components/VerticalNav'
+import Layout from '../components/Layout';
+import HorizontalNav from '../components/HorizontalNav';
+import VerticalNav from '../components/VerticalNav';
 
 class IndexPage extends Component {
   state = {
@@ -16,14 +16,14 @@ class IndexPage extends Component {
       'Blockchain Enthusiast.',
       'Fullstack Developer.',
     ]
-  }
+  };
 
   handlePageLeave = (name) => {
     this.setState({
       inTransition: true,
       nextPageName: name.toLowerCase()
-    })
-  }
+    });
+  };
 
   render() {
     return (
@@ -85,7 +85,7 @@ class IndexPage extends Component {
           )}
         </Transition>
       </Layout>
-    )
+    );
   }
 }
 
@@ -96,7 +96,7 @@ const defaultStyle = {
   justifyContent: 'space-between',
   textAlign: 'center',
   transition: 'margin-right 1s ease-in-out, margin-left 1s ease-in-out, margin-top 1s ease-in-out, opacity 500ms'
-}
+};
 
 const transitionStyles = {
   about: {
@@ -153,6 +153,6 @@ const transitionStyles = {
       opacity: 0
     }
   }
-}
+};
 
-export default IndexPage
+export default IndexPage;
