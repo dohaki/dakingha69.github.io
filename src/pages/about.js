@@ -7,7 +7,7 @@ const AboutPage = () => (
   <PageTemplate title="Hello world!">
     <Paragraph alignSelf="center">
       Welcome to my website. My name is Dong-Ha Kim and I am
-      a Fullstack Javascript Developer, Blockchain Entusiast and
+      a Fullstack Javascript Developer, Blockchain Enthusiast and
       M. Sc. Student at the TU Berlin.
     </Paragraph>
     <Paragraph alignSelf="center">

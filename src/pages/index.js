@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Heading } from 'grommet';
+import { Box, Heading } from 'grommet';
 import Transition from 'react-transition-group/Transition';
 import Typist from 'react-typist';
 
@@ -12,7 +12,7 @@ class IndexPage extends Component {
     inTransition: false,
     nextPageName: 'home',
     subTitles: [
-      'Master Student TU Berlin.',
+      'M. Sc. Student TU Berlin.',
       'Blockchain Enthusiast.',
       'Fullstack Developer.',
     ]
@@ -42,7 +42,7 @@ class IndexPage extends Component {
                 name='ABOUT'
                 onPageLeave={this.handlePageLeave}
               />
-              <div
+              <Box
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
@@ -55,12 +55,13 @@ class IndexPage extends Component {
                   name='CONTACT'
                   onPageLeave={this.handlePageLeave}
                 />
-                <div>
+                <Box width="250px">
                   <Heading>DH.Kim</Heading>
                   <Typist
                     cursor={{ show: false }}
                     avgTypingDelay={100}
                   >
+                    .
                     {this.state.subTitles.map(subTitle => (
                       <div key={subTitle}>
                         <span>{subTitle}</span>
@@ -68,14 +69,14 @@ class IndexPage extends Component {
                       </div>
                     ))}
                   </Typist>
-                </div>
+                </Box>
                 <HorizontalNav
                   direction='right'
                   link='/projects'
                   name='PROJECTS'
                   onPageLeave={this.handlePageLeave}
                 />
-              </div>
+              </Box>
               <VerticalNav
                 link='/blog'
                 name='BLOG'
