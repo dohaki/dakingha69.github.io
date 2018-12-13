@@ -12,6 +12,7 @@ class IndexPage extends Component {
     inTransition: false,
     nextPageName: 'home',
     subTitles: [
+      'Dong-Ha Kim.',
       'M. Sc. Student TU Berlin.',
       'Blockchain Enthusiast.',
       'Fullstack Developer.',
@@ -57,18 +58,22 @@ class IndexPage extends Component {
                 />
                 <Box width="250px">
                   <Heading>DH.Kim</Heading>
-                  <Typist
-                    cursor={{ show: false }}
-                    avgTypingDelay={100}
-                  >
-                    .
-                    {this.state.subTitles.map(subTitle => (
-                      <div key={subTitle}>
-                        <span>{subTitle}</span>
-                        <Typist.Backspace count={subTitle.length} delay={2000} />
-                      </div>
-                    ))}
-                  </Typist>
+                  <Box height="50px">
+                    <Typist
+                      cursor={{ show: false }}
+                      avgTypingDelay={100}
+                      >
+                      {this.state.subTitles.map((subTitle, i) => (
+                        <div key={i}>
+                          <span>{subTitle}</span>
+                          <Typist.Backspace
+                            count={i !== this.state.subTitles.length - 1 ? subTitle.length : 0}
+                            delay={2000}
+                          />
+                        </div>
+                      ))}
+                    </Typist>
+                    </Box>
                 </Box>
                 <HorizontalNav
                   direction='right'
