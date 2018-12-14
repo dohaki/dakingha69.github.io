@@ -39,8 +39,8 @@ class IndexPage extends Component {
               ...transitionStyles[this.state.nextPageName][state]
             }}>
               <VerticalNav
-                link='/about'
-                name='ABOUT'
+                link="/about"
+                name="ABOUT"
                 onPageLeave={this.handlePageLeave}
               />
               <Box
@@ -51,9 +51,9 @@ class IndexPage extends Component {
                 }}
               >
                 <HorizontalNav
-                  direction='left'
-                  link='/contact'
-                  name='CONTACT'
+                  direction="left"
+                  link="/contact"
+                  name="CONTACT"
                   onPageLeave={this.handlePageLeave}
                 />
                 <Box width="250px">
@@ -76,15 +76,15 @@ class IndexPage extends Component {
                     </Box>
                 </Box>
                 <HorizontalNav
-                  direction='right'
-                  link='/projects'
-                  name='PROJECTS'
+                  direction="right"
+                  link="/projects"
+                  name="PROJECTS"
                   onPageLeave={this.handlePageLeave}
                 />
               </Box>
               <VerticalNav
-                link='/blog'
-                name='BLOG'
+                link="/blog"
+                name="BLOG"
                 onPageLeave={this.handlePageLeave}
               />
             </div>
