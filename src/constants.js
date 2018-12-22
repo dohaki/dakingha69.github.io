@@ -75,3 +75,30 @@ export const SKILLS = [
     level: 85
   },
 ];
+
+export const PROJECTS = [
+  {
+    title: 'Project title',
+    description: 'Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla'
+  },
+  {
+    title: 'Project title',
+    description: 'Bla bla bla bla bla bla'
+  },
+  {
+    title: 'Project title',
+    description: 'Bla bla bla bla bla bla'
+  },
+  {
+    title: 'Project title',
+    description: 'Bla bla bla bla bla bla'
+  },
+  {
+    title: 'Project title',
+    description: 'Bla bla bla bla bla bla'
+  },
+  {
+    title: 'Project title',
+    description: 'Bla bla bla bla bla bla'
+  },
+];
