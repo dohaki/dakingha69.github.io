@@ -10,12 +10,13 @@ const ProjectList = ({ projects }) => {
       projects.map((project, i) => (
         <ProjectCard
           key={i}
+          accentKey={i}
           title={project.title}
           description={project.description}
         />
       ))
-    }    
-  </Grid>
+    }
+    </Grid>
   );
 }
  
