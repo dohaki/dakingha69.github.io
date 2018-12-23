@@ -76,29 +76,64 @@ export const SKILLS = [
   },
 ];
 
+// keywords
+const REACT = 'react'
+const GATSBY = 'gatsby'
+
+const TYPE_SCRIPT = 'typescript'
+
+const ETHEREUM = 'ethereum'
+const WEB3 = 'web3'
+const TRUFFLE = 'truffle'
+const ETHERS = 'ethers'
+const SOLIDITY = 'solidity'
+
+const SCIENTIFIC_PAPER = 'scientific paper'
+
 export const PROJECTS = [
   {
-    title: 'Project title',
-    description: 'Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla'
+    title: 'dongha.kim',
+    description: 'My personal website build with gatsby',
+    keywords: [REACT, GATSBY],
+    links: {
+      github: 'https://github.com',
+      url: 'dongha.kim',
+    }
   },
   {
-    title: 'Project title',
-    description: 'Bla bla bla bla bla bla'
+    title: 'trustlines.network clientlib',
+    description: 'People powered money - Ethereum based social credit protocol, where I contributed a lot to the TypeScript client library.',
+    keywords: [ETHEREUM, WEB3, TYPE_SCRIPT],
+    links: {
+      github: 'https://github.com',
+      url: ''
+    }
   },
   {
-    title: 'Project title',
-    description: 'Bla bla bla bla bla bla'
+    title: 'CITES Blockchain Challenge',
+    description: '',
+    keywords: [ETHEREUM, WEB3, TRUFFLE, SOLIDITY],
+    links: {
+      github: 'https://github.com',
+      url: ''
+    }
   },
   {
-    title: 'Project title',
-    description: 'Bla bla bla bla bla bla'
+    title: 'CITES Blockchain Challenge Paper',
+    description: '',
+    keywords: [ETHEREUM, SCIENTIFIC_PAPER],
+    links: {
+      github: 'https://github.com',
+      url: ''
+    }
   },
   {
-    title: 'Project title',
-    description: 'Bla bla bla bla bla bla'
-  },
-  {
-    title: 'Project title',
-    description: 'Bla bla bla bla bla bla'
-  },
+    title: 'Chances and Challenges of Decentralized Applications',
+    description: 'My Bachelor thesis I wrote at the Technical University of Darmstadt. Unfortunately it is only available in german.',
+    keywords: [ETHEREUM, SCIENTIFIC_PAPER],
+    links: {
+      github: 'https://github.com',
+      url: ''
+    }
+  }
 ];
