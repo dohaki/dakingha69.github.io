@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Box, Image, Text, Heading } from 'grommet';
 
-import OverlayLinkBox from './OverlayLinkBox';
+import OverlayLinksBox from './OverlayLinksBox';
 
 class ProjectCard extends Component {
   state = {
@@ -29,7 +29,7 @@ class ProjectCard extends Component {
         onMouseEnter={this.handleEvent}
         onMouseLeave={this.handleEvent}
       >
-        <OverlayLinkBox
+        <OverlayLinksBox
           accentKey={accentKey}
           showOverlay={showOverlay}
           links={links}
@@ -52,7 +52,7 @@ class ProjectCard extends Component {
               {description}
             </Text>
           </Box>
-        </OverlayLinkBox>
+        </OverlayLinksBox>
       </Box>
     );
   }

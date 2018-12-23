@@ -13,6 +13,7 @@ const ProjectList = ({ projects }) => {
           accentKey={i}
           title={project.title}
           description={project.description}
+          links={project.links}
         />
       ))
     }

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Stack } from 'grommet';
 
-const OverlayLinkBox =  ({ children, links, showOverlay, accentKey }) => {
+import LinkIconsBox from './LinkIconsBox';
+
+const OverlayLinksBox =  ({ children, links, showOverlay, accentKey }) => {
   return (
     <Stack>
       <Box>
@@ -15,10 +17,10 @@ const OverlayLinkBox =  ({ children, links, showOverlay, accentKey }) => {
             justify="center"
             background={{
               color: `accent-${accentKey % 4 + 1}`,
-              opacity: true
+              opacity: 'strong'
             }}
           >
-            LINKS
+            <LinkIconsBox links={links} />
           </Box>
         )
       }
@@ -26,4 +28,4 @@ const OverlayLinkBox =  ({ children, links, showOverlay, accentKey }) => {
   );
 }
  
-export default OverlayLinkBox;
+export default OverlayLinksBox;

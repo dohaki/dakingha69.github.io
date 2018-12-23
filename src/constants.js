@@ -96,7 +96,7 @@ export const PROJECTS = [
     description: 'My personal website build with gatsby',
     keywords: [REACT, GATSBY],
     links: {
-      github: 'https://github.com',
+      github: 'https://github.com/dakingha69/dakingha69.github.io',
       url: 'dongha.kim',
     }
   },
@@ -105,8 +105,7 @@ export const PROJECTS = [
     description: 'People powered money - Ethereum based social credit protocol, where I contributed a lot to the TypeScript client library.',
     keywords: [ETHEREUM, WEB3, TYPE_SCRIPT],
     links: {
-      github: 'https://github.com',
-      url: ''
+      github: 'https://github.com/trustlines-network/clientlib'
     }
   },
   {
@@ -114,8 +113,7 @@ export const PROJECTS = [
     description: '',
     keywords: [ETHEREUM, WEB3, TRUFFLE, SOLIDITY],
     links: {
-      github: 'https://github.com',
-      url: ''
+      github: 'https://github.com/cites-on-blocks/cites-on-blocks_dapp'
     }
   },
   {
@@ -123,17 +121,15 @@ export const PROJECTS = [
     description: '',
     keywords: [ETHEREUM, SCIENTIFIC_PAPER],
     links: {
-      github: 'https://github.com',
-      url: ''
+      file: ''
     }
   },
   {
-    title: 'Chances and Challenges of Decentralized Applications',
+    title: 'Chances and Challenges of DApps',
     description: 'My Bachelor thesis I wrote at the Technical University of Darmstadt. Unfortunately it is only available in german.',
     keywords: [ETHEREUM, SCIENTIFIC_PAPER],
     links: {
-      github: 'https://github.com',
-      url: ''
+      file: ''
     }
   }
 ];
