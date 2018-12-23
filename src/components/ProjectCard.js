@@ -14,6 +14,10 @@ class ProjectCard extends Component {
         return this.setState({ showOverlay: true });
       case 'mouseleave':
         return this.setState({ showOverlay: false });
+      case 'touchstart':
+        return this.setState({ showOverlay: true });
+      case 'touchend':
+        return this.setState({ showOverlay: false });
       default:
         return console.warn(`No case for event type: ${type}`);
     }
@@ -28,6 +32,8 @@ class ProjectCard extends Component {
         margin="xsmall"
         onMouseEnter={this.handleEvent}
         onMouseLeave={this.handleEvent}
+        onTouchStart={this.handleEvent}
+        onTouchEnd={this.handleEvent}
       >
         <OverlayLinksBox
           accentKey={accentKey}
