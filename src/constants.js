@@ -92,7 +92,7 @@ const SCIENTIFIC_PAPER = 'scientific paper'
 export const PROJECTS = [
   {
     title: 'dongha.kim',
-    description: 'My personal website build with react. I used gatsby as a Static Site Generator.',
+    description: 'My personal website built with react. I used gatsby for generating the static files.',
     keywords: [REACT, GATSBY],
     links: {
       github: 'https://github.com/dakingha69/dakingha69.github.io',
