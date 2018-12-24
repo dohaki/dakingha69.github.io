@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Image, Text, Heading } from 'grommet';
+import { Box, Image, Text } from 'grommet';
 
 import OverlayLinksBox from './OverlayLinksBox';
 
