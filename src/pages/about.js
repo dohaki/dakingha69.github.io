@@ -19,8 +19,10 @@ const AboutPage = () => (
       <Paragraph>
         This site is unfortunately still WIP. You will find different
         projects and blog posts of mine in the near future here. Until
-        then check out my&nbsp;
-        <Anchor label="github" href="https://github.com/dakingha69" />
+        then check out my
+        &nbsp;&nbsp;<Anchor label="GitHub" href="https://github.com/dakingha69" />&nbsp;&nbsp;
+        or
+        &nbsp; <Anchor label="LinkedIn" href="https://www.linkedin.com/in/dhkim0210" />
         .
       </Paragraph>
       <Heading>
@@ -31,13 +33,6 @@ const AboutPage = () => (
         level.
       </Paragraph>
       <SkillListContainer />
-      <Paragraph>
-        Some more things I like are
-        FOOD <span role="img" aria-label="food">😋</span>,
-        TECHNO <span role="img" aria-label="dance">🕺</span>,
-        GAMES <span role="img" aria-label="game">🎮</span>
-        and CATS <span role="img" aria-label="cats">🐱</span>.
-      </Paragraph>
     </Box>
   </PageTemplate>
 );
