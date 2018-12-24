@@ -2,13 +2,15 @@ import React from 'react';
 import { Anchor, Box, Heading, Paragraph } from 'grommet';
 
 import PageTemplate from '../components/PageTemplate';
-import SkillBox from '../components/SkillBox';
 
-import { CATEGORIES, SKILLS } from '../constants';
+import SkillListContainer from '../containers/SkillListContainer';
 
 const AboutPage = () => (
   <PageTemplate title="Hello world!">
-    <Box align="center">
+    <Box  
+      align="center"
+      pad={{ horizontal: 'small' }}
+    >
       <Paragraph>
         Welcome to my website. My name is Dong-Ha Kim and I am
         a Fullstack Javascript Developer, Blockchain Enthusiast and
@@ -25,17 +27,10 @@ const AboutPage = () => (
         Skills
       </Heading>
       <Paragraph>
-        Below you can find a list of my skills with an estimated level on how
-        proficient I see myself.
+        Below you can find a list of my skills with an estimated proficiency
+        level.
       </Paragraph>
-      {CATEGORIES && CATEGORIES.map(category => (
-        <SkillBox
-          key={category}
-          category={category}
-          skills={SKILLS.filter(skill => skill.category === category)}
-        />
-      ))}
-      <SkillBox></SkillBox>
+      <SkillListContainer />
       <Paragraph>
         Some more things I like are
         FOOD <span role="img" aria-label="food">😋</span>,

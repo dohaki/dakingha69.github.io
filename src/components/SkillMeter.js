@@ -8,9 +8,9 @@ const SkillMeter = ({ name, level }) => {
         {name}
       </Text>
       <Meter
-      type="bar"
+        type="bar"
         values={[{ value: level }]}
-        margin={{ top: "small" }}
+        margin={{ vertical: "small" }}
         background="light-2"
       />
     </Box>

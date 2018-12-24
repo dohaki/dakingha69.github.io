@@ -17,7 +17,7 @@ export const PAGES = [
   }
 ];
 
-export const CATEGORIES = [
+export const SKILL_CATEGORIES = [
   'Javascript',
   'Ethereum',
   'Tools',
@@ -41,7 +41,7 @@ export const SKILLS = [
   },
   {
     category: 'Javascript',
-    name: 'Node.js',
+    name: 'Node',
     level: 70
   },
   {
@@ -51,7 +51,7 @@ export const SKILLS = [
   },
   {
     category: 'Tools',
-    name: 'Travis CI',
+    name: 'Travis CI / Circle CI',
     level: 60
   },
   {
