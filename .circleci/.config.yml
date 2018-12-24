@@ -1,0 +1,27 @@
+version: 2
+
+orbs:
+  node: circleci/node@0.0.7
+
+jobs:
+  build:
+    steps:
+      - node/install-package-manager:
+          yarn: true
+      - checkout
+      - run: yarn && yarn build
+  deploy:
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "fc:1b:db:d1:9d:ba:fc:8c:d0:07:27:45:bb:87:3e:ef"
+      - node/install-package-manager:
+          yarn: true
+      - checkout
+      - run: yarn && yarn build
+
+workflows:
+  version: 2
+  test-build-deploy:
+    jobs:
+      - deploy

@@ -85,7 +85,6 @@ const TYPE_SCRIPT = 'typescript'
 const ETHEREUM = 'ethereum'
 const WEB3 = 'web3'
 const TRUFFLE = 'truffle'
-const ETHERS = 'ethers'
 const SOLIDITY = 'solidity'
 
 const SCIENTIFIC_PAPER = 'scientific paper'
@@ -93,7 +92,7 @@ const SCIENTIFIC_PAPER = 'scientific paper'
 export const PROJECTS = [
   {
     title: 'dongha.kim',
-    description: 'My personal website build with gatsby',
+    description: 'My personal website build with react. I used gatsby as a Static Site Generator.',
     keywords: [REACT, GATSBY],
     links: {
       github: 'https://github.com/dakingha69/dakingha69.github.io',
