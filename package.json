@@ -27,7 +27,7 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && gh-pages -b master -d public"
+    "deploy": "gatsby build && gh-pages -b master -d public -u 'Dong-Ha Kim <dongha.kim210@gmail.com>'"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
