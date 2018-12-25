@@ -19,9 +19,9 @@ class SkillListContainer extends Component {
 
   render() {
     const { skillCategories, skills } = this.state;
-    return skillCategories.map(category => (
+    return skillCategories.map((category, i) => (
       <SkillBox
-        key={category}
+        key={i}
         category={category}
         skills={skills.filter(skill => skill.category === category)}
       />
