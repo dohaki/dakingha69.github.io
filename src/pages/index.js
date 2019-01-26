@@ -16,28 +16,27 @@ class IndexPage extends Component {
       'M. Sc. Student TU Berlin.',
       'Blockchain Enthusiast.',
       'Fullstack Developer.',
-    ]
+    ],
   };
 
-  handlePageLeave = (name) => {
+  handlePageLeave = name => {
     this.setState({
       inTransition: true,
-      nextPageName: name.toLowerCase()
+      nextPageName: name.toLowerCase(),
     });
   };
 
   render() {
     return (
       <Layout>
-        <Transition
-          in={this.state.inTransition}
-          timeout={500}
-        >
+        <Transition in={this.state.inTransition} timeout={500}>
           {state => (
-            <div style={{
-              ...defaultStyle,
-              ...transitionStyles[this.state.nextPageName][state]
-            }}>
+            <div
+              style={{
+                ...defaultStyle,
+                ...transitionStyles[this.state.nextPageName][state],
+              }}
+            >
               <VerticalNav
                 link="/about"
                 name="ABOUT"
@@ -59,21 +58,22 @@ class IndexPage extends Component {
                 <Box width="250px">
                   <Heading>DH.Kim</Heading>
                   <Box height="50px">
-                    <Typist
-                      cursor={{ show: false }}
-                      avgTypingDelay={100}
-                      >
+                    <Typist cursor={{ show: false }} avgTypingDelay={100}>
                       {this.state.subTitles.map((subTitle, i) => (
                         <div key={i}>
                           <span>{subTitle}</span>
                           <Typist.Backspace
-                            count={i !== this.state.subTitles.length - 1 ? subTitle.length : 0}
+                            count={
+                              i !== this.state.subTitles.length - 1
+                                ? subTitle.length
+                                : 0
+                            }
                             delay={2000}
                           />
                         </div>
                       ))}
                     </Typist>
-                    </Box>
+                  </Box>
                 </Box>
                 <HorizontalNav
                   direction="right"
@@ -101,64 +101,65 @@ const defaultStyle = {
   flexDirection: 'column',
   justifyContent: 'space-between',
   textAlign: 'center',
-  transition: 'margin-right 1s ease-in-out, margin-left 1s ease-in-out, margin-top 1s ease-in-out, opacity 500ms'
+  transition:
+    'margin-right 1s ease-in-out, margin-left 1s ease-in-out, margin-top 1s ease-in-out, opacity 500ms',
 };
 
 const transitionStyles = {
   about: {
     entering: {
       marginTop: '500px',
-      opacity: 1
+      opacity: 1,
     },
     entered: {
       marginTop: '500px',
-      opacity: 0
-    }
+      opacity: 0,
+    },
   },
   contact: {
     entering: {
       marginLeft: '500px',
       marginRight: '-500px',
-      opacity: 1
+      opacity: 1,
     },
     entered: {
       marginLeft: '500px',
       marginRight: '-500px',
-      opacity: 0
-    }
+      opacity: 0,
+    },
   },
   home: {
     entering: {
       marginTop: '500px',
-      opacity: 1
+      opacity: 1,
     },
     entered: {
       marginTop: '500px',
-      opacity: 0
-    }
+      opacity: 0,
+    },
   },
   projects: {
     entering: {
       marginLeft: '-500px',
       marginRight: '500px',
-      opacity: 1
+      opacity: 1,
     },
     entered: {
       marginLeft: '-500px',
-      marginRight: '500px',            
-      opacity: 0
-    }
+      marginRight: '500px',
+      opacity: 0,
+    },
   },
   blog: {
     entering: {
       marginTop: '-500px',
-      opacity: 1
+      opacity: 1,
     },
     entered: {
       marginTop: '-500px',
-      opacity: 0
-    }
-  }
+      opacity: 0,
+    },
+  },
 };
 
 export default IndexPage;

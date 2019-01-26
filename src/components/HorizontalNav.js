@@ -6,10 +6,7 @@ import RotatedAnchor from './RotatedAnchor';
 
 const HorizontalNav = ({ direction, link, name, onPageLeave }) => {
   return (
-    <Box
-      justify="center"
-      width="xsmall"
-    >
+    <Box justify="center" width="xsmall">
       <RotatedAnchor
         direction={direction}
         color="dark-1"
@@ -23,6 +20,6 @@ const HorizontalNav = ({ direction, link, name, onPageLeave }) => {
       />
     </Box>
   );
-}
+};
 
 export default HorizontalNav;

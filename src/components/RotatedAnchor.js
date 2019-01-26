@@ -3,10 +3,8 @@ import styled from 'styled-components';
 
 const RotatedAnchor = styled(Anchor)`
   &&& {
-    transform: ${props => props.direction === 'left'
-      ? 'rotate(90deg)'
-      : 'rotate(270deg)'
-    };
+    transform: ${props =>
+      props.direction === 'left' ? 'rotate(90deg)' : 'rotate(270deg)'};
   }
 `;
 

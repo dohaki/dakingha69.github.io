@@ -13,22 +13,16 @@ const getIconOfLink = linkKey => {
     default:
       break;
   }
-}
+};
 
 const LinkIconsBox = ({ links }) => {
   return (
     <Box direction="row">
-      {
-        Object.keys(links).map((linkKey, i) => (
-          <Anchor
-            key={i}
-            icon={getIconOfLink(linkKey)}
-            href={links[linkKey]}
-          />
-        ))
-      }
+      {Object.keys(links).map((linkKey, i) => (
+        <Anchor key={i} icon={getIconOfLink(linkKey)} href={links[linkKey]} />
+      ))}
     </Box>
   );
-}
- 
+};
+
 export default LinkIconsBox;

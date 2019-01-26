@@ -5,7 +5,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.12
-      
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -20,8 +20,8 @@ jobs:
       # Add deploymet key
       - add_ssh_keys:
           fingerprints:
-            - "fc:1b:db:d1:9d:ba:fc:8c:d0:07:27:45:bb:87:3e:ef"
-      
+            - 'fc:1b:db:d1:9d:ba:fc:8c:d0:07:27:45:bb:87:3e:ef'
+
       # Download and cache dependencies
       - restore_cache:
           keys:

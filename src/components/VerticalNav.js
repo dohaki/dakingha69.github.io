@@ -4,10 +4,7 @@ import { Anchor, Box } from 'grommet';
 
 const VerticalNav = ({ link, name, onPageLeave }) => {
   return (
-    <Box
-      justify="center"
-      pad="medium"
-    >
+    <Box justify="center" pad="medium">
       <Anchor
         color="dark-1"
         label={name}
@@ -20,6 +17,6 @@ const VerticalNav = ({ link, name, onPageLeave }) => {
       />
     </Box>
   );
-}
+};
 
 export default VerticalNav;

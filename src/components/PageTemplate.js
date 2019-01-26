@@ -9,13 +9,11 @@ const PageTemplate = ({ title, children }) => {
     <Layout>
       <Box animation="fadeIn">
         <TopNav />
-        <Heading alignSelf="center">
-          {title}
-        </Heading>
+        <Heading alignSelf="center">{title}</Heading>
         {children}
       </Box>
     </Layout>
   );
-}
- 
+};
+
 export default PageTemplate;

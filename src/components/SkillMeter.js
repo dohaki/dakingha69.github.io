@@ -4,17 +4,15 @@ import { Box, Meter, Text } from 'grommet';
 const SkillMeter = ({ name, level }) => {
   return (
     <Box>
-      <Text>
-        {name}
-      </Text>
+      <Text>{name}</Text>
       <Meter
         type="bar"
         values={[{ value: level }]}
-        margin={{ vertical: "small" }}
+        margin={{ vertical: 'small' }}
         background="light-2"
       />
     </Box>
   );
-}
- 
+};
+
 export default SkillMeter;

@@ -5,8 +5,8 @@ import OverlayLinksBox from './OverlayLinksBox';
 
 class ProjectCard extends Component {
   state = {
-    showOverlay: false
-  }
+    showOverlay: false,
+  };
 
   handleEvent = ({ type }) => {
     switch (type) {
@@ -15,11 +15,13 @@ class ProjectCard extends Component {
       case 'mouseleave':
         return this.setState({ showOverlay: false });
       case 'click':
-        return this.setState(({ showOverlay }) => ({ showOverlay: !showOverlay }));
+        return this.setState(({ showOverlay }) => ({
+          showOverlay: !showOverlay,
+        }));
       default:
         return console.warn(`No case for event type: ${type}`);
     }
-  }
+  };
 
   render() {
     const { title, description, links, accentKey } = this.props;
@@ -36,28 +38,19 @@ class ProjectCard extends Component {
           accentKey={accentKey}
           showOverlay={showOverlay}
           links={links}
-        >            
+        >
           <Box height="small">
-            <Image
-              src="https://via.placeholder.com/300x150"
-              fit="cover"
-            />
+            <Image src="https://via.placeholder.com/300x150" fit="cover" />
           </Box>
-          <Text
-            size="large"
-            weight="bold"
-            margin={{ vertical: "small" }}
-          >
+          <Text size="large" weight="bold" margin={{ vertical: 'small' }}>
             {title}
           </Text>
           <Box height="small">
-            <Text>
-              {description}
-            </Text>
+            <Text>{description}</Text>
           </Box>
         </OverlayLinksBox>
       </Box>
     );
   }
-} 
+}
 export default ProjectCard;

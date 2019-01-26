@@ -6,8 +6,7 @@ import ProjectCard from '../components/ProjectCard';
 const ProjectList = ({ projects }) => {
   return (
     <Grid direction="row" columns="medium">
-    {
-      projects.map((project, i) => (
+      {projects.map((project, i) => (
         <ProjectCard
           key={i}
           accentKey={i}
@@ -15,10 +14,9 @@ const ProjectList = ({ projects }) => {
           description={project.description}
           links={project.links}
         />
-      ))
-    }
+      ))}
     </Grid>
   );
-}
- 
+};
+
 export default ProjectList;

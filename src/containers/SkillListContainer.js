@@ -7,13 +7,13 @@ import { SKILLS, SKILL_CATEGORIES } from '../constants';
 class SkillListContainer extends Component {
   state = {
     skills: [],
-    skillCategories: []
-  }
+    skillCategories: [],
+  };
 
   componentDidMount() {
     this.setState({
       skills: SKILLS,
-      skillCategories: SKILL_CATEGORIES
+      skillCategories: SKILL_CATEGORIES,
     });
   }
 
@@ -28,5 +28,5 @@ class SkillListContainer extends Component {
     ));
   }
 }
- 
+
 export default SkillListContainer;

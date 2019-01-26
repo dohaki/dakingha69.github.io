@@ -6,18 +6,16 @@ import { PROJECTS } from '../constants';
 
 class ProjectListContainer extends Component {
   state = {
-    projects: []
-  }
+    projects: [],
+  };
 
   componentDidMount() {
     this.setState({ projects: PROJECTS });
   }
 
-  render() { 
-    return (
-      <ProjectList projects={this.state.projects} />
-    );
+  render() {
+    return <ProjectList projects={this.state.projects} />;
   }
 }
- 
+
 export default ProjectListContainer;

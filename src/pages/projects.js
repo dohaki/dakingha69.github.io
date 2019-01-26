@@ -4,9 +4,7 @@ import PageTemplate from '../components/PageTemplate';
 import ProjectListContainer from '../containers/ProjectListContainer';
 
 const ProjectsPage = () => (
-  <PageTemplate
-    title="My projects"
-  >
+  <PageTemplate title="My projects">
     <ProjectListContainer />
   </PageTemplate>
 );
