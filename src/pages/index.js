@@ -13,9 +13,9 @@ class IndexPage extends Component {
     nextPageName: 'home',
     subTitles: [
       'Dong-Ha Kim.',
-      'M. Sc. Student TU Berlin.',
+      'Web3 Developer.',
       'Blockchain Enthusiast.',
-      'Fullstack Developer.',
+      'M. Sc. Student TU Berlin.',
     ],
   };
 
