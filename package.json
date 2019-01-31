@@ -26,7 +26,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "prettier:check": "prettier --check \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build && gh-pages -b master -d public -u 'Dong-Ha Kim <dongha.kim210@gmail.com>'"
   },
