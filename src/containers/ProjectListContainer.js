@@ -5,16 +5,8 @@ import ProjectList from '../components/ProjectList';
 import { PROJECTS } from '../constants';
 
 class ProjectListContainer extends Component {
-  state = {
-    projects: [],
-  };
-
-  componentDidMount() {
-    this.setState({ projects: PROJECTS });
-  }
-
   render() {
-    return <ProjectList projects={this.state.projects} />;
+    return <ProjectList projects={PROJECTS} />;
   }
 }
 
