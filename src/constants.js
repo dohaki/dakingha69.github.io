@@ -88,8 +88,7 @@ const SCIENTIFIC_PAPER = 'scientific paper';
 export const PROJECTS = [
   {
     title: 'dongha.kim',
-    description:
-      'My personal website built with react. I used gatsby for generating the static files.',
+    description: 'My personal website built with gatsby.',
     keywords: [REACT, GATSBY],
     links: {
       github: 'https://github.com/dakingha69/dakingha69.github.io',
@@ -116,15 +115,6 @@ export const PROJECTS = [
   {
     title: 'CITES Blockchain Challenge Paper',
     description: '',
-    keywords: [ETHEREUM, SCIENTIFIC_PAPER],
-    links: {
-      file: '',
-    },
-  },
-  {
-    title: 'Chances and Challenges of DApps',
-    description:
-      'My Bachelor thesis I wrote at the Technical University of Darmstadt. Unfortunately it is only available in german.',
     keywords: [ETHEREUM, SCIENTIFIC_PAPER],
     links: {
       file: '',
