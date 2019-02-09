@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { Grommet } from 'grommet';
 import { grommet } from 'grommet/themes';
 
-import './styles.css';
+import '../styles/global.css';
 
 const Layout = ({ children }) => {
   return (
