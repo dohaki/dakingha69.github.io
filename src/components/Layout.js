@@ -3,18 +3,17 @@ import Helmet from 'react-helmet';
 import { Grommet } from 'grommet';
 import { grommet } from 'grommet/themes';
 
-import '../styles/global.css';
-
-const Layout = ({ children }) => {
+const Layout = ({ children, title = 'DH.Kim' }) => {
   return (
     <Grommet theme={grommet} style={{ height: '100%' }}>
       <Helmet
-        title="DH.Kim"
+        title={title}
         meta={[
           { name: 'description', content: 'Website of Dong-Ha Kim' },
           {
             name: 'keywords',
-            content: 'web development, blockchain, student, blog, javascript',
+            content:
+              'web development, blockchain, student, blog, javascript, dongha, kim, dong-ha',
           },
         ]}
       />

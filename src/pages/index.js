@@ -28,7 +28,7 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout title={'DH.Kim | Welcome ♥'}>
         <Transition in={this.state.inTransition} timeout={500}>
           {state => (
             <div

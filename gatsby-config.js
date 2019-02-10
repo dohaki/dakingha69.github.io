@@ -4,5 +4,5 @@ module.exports = {
     siteUrl: `https://www.dongha.kim`,
     description: `Welcome`,
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: ['gatsby-plugin-styled-components', 'gatsby-plugin-react-helmet'],
 };
