@@ -1,21 +1,21 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
-import { Box, Button, Menu } from 'grommet';
-import { Home } from 'grommet-icons';
+import { Anchor, Box, Button } from 'grommet';
+import { Deploy } from 'grommet-icons';
 
 import { PAGES } from '../constants';
 
 const TopNav = props => {
   return (
     <Box direction="row" style={{ justifyContent: 'space-around' }}>
-      <Button icon={<Home />} onClick={() => navigate('/')} />
-      <Menu
-        label="Go to"
-        items={PAGES.map(({ to, name }) => ({
-          label: name,
-          onClick: () => navigate(to),
-        }))}
-      />
+      <Button icon={<Deploy />} onClick={() => navigate('/')} />
+      <Box direction="row">
+        {PAGES.map(({ to, name }) => (
+          <Box pad="small">
+            <Anchor color="dark-1" label={name} onClick={() => navigate(to)} />
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };

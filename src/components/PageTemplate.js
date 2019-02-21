@@ -6,7 +6,7 @@ import TopNav from './TopNav';
 
 const PageTemplate = ({ title, children }) => {
   return (
-    <Layout>
+    <Layout title={title}>
       <Box animation="fadeIn">
         <TopNav />
         <Heading alignSelf="center">{title}</Heading>

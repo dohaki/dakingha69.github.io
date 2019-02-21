@@ -1,5 +1,9 @@
 export const PAGES = [
   {
+    to: '/',
+    name: 'HOME',
+  },
+  {
     to: '/about',
     name: 'ABOUT',
   },
