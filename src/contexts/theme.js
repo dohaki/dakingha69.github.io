@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
-export const ThemeContext = React.createContext();
+export const ThemeContext = React.createContext({
+  theme: 'grommet',
+  toggleTheme: () => {},
+});
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('grommet');
