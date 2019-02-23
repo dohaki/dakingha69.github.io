@@ -10,8 +10,8 @@ const TopNav = props => {
     <Box direction="row" style={{ justifyContent: 'space-around' }}>
       <Button icon={<Deploy />} onClick={() => navigate('/')} />
       <Box direction="row">
-        {PAGES.map(({ to, name }) => (
-          <Box pad="small">
+        {PAGES.map(({ to, name }, i) => (
+          <Box pad="small" key={i}>
             <Anchor color="dark-1" label={name} onClick={() => navigate(to)} />
           </Box>
         ))}

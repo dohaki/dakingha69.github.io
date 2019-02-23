@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from 'gatsby-link';
+import { navigate } from 'gatsby';
 import { Anchor, Box } from 'grommet';
 
 const VerticalNav = ({ link, name, onPageLeave }) => {

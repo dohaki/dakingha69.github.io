@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from 'gatsby-link';
+import { navigate } from 'gatsby';
 import { Box } from 'grommet';
 
 import RotatedAnchor from './RotatedAnchor';

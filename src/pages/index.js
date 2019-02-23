@@ -7,6 +7,8 @@ import Layout from '../components/Layout';
 import HorizontalNav from '../components/HorizontalNav';
 import VerticalNav from '../components/VerticalNav';
 
+import { ThemeContext } from '../contexts/theme';
+
 class IndexPage extends Component {
   state = {
     inTransition: false,
@@ -55,26 +57,30 @@ class IndexPage extends Component {
                   name="CONTACT"
                   onPageLeave={this.handlePageLeave}
                 />
-                <Box width="250px">
-                  <Heading>DH.Kim</Heading>
-                  <Box height="50px">
-                    <Typist cursor={{ show: false }} avgTypingDelay={100}>
-                      {this.state.subTitles.map((subTitle, i) => (
-                        <div key={i}>
-                          <span>{subTitle}</span>
-                          <Typist.Backspace
-                            count={
-                              i !== this.state.subTitles.length - 1
-                                ? subTitle.length
-                                : 0
-                            }
-                            delay={2000}
-                          />
-                        </div>
-                      ))}
-                    </Typist>
-                  </Box>
-                </Box>
+                <ThemeContext.Consumer>
+                  {({ toggleTheme }) => (
+                    <Box width="250px" onClick={() => toggleTheme()}>
+                      <Heading>DH.Kim</Heading>
+                      <Box height="50px">
+                        <Typist cursor={{ show: false }} avgTypingDelay={100}>
+                          {this.state.subTitles.map((subTitle, i) => (
+                            <div key={i}>
+                              <span>{subTitle}</span>
+                              <Typist.Backspace
+                                count={
+                                  i !== this.state.subTitles.length - 1
+                                    ? subTitle.length
+                                    : 0
+                                }
+                                delay={2000}
+                              />
+                            </div>
+                          ))}
+                        </Typist>
+                      </Box>
+                    </Box>
+                  )}
+                </ThemeContext.Consumer>
                 <HorizontalNav
                   direction="right"
                   link="/projects"
