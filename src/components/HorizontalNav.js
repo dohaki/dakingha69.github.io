@@ -9,7 +9,6 @@ const HorizontalNav = ({ direction, link, name, onPageLeave }) => {
     <Box justify="center" width="xsmall">
       <RotatedAnchor
         direction={direction}
-        color="dark-1"
         label={name}
         onClick={() => {
           onPageLeave(name);

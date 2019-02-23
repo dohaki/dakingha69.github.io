@@ -6,7 +6,6 @@ const VerticalNav = ({ link, name, onPageLeave }) => {
   return (
     <Box justify="center" pad="medium">
       <Anchor
-        color="dark-1"
         label={name}
         onClick={() => {
           onPageLeave(name);

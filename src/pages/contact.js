@@ -5,8 +5,8 @@ import PageTemplate from '../components/PageTemplate';
 
 const ContactPage = () => {
   return (
-    <Layout title="Contact me">
-      <PageTemplate title="My projects" />
+    <Layout title="Contact">
+      <PageTemplate title="Say Hi!" />
     </Layout>
   );
 };
