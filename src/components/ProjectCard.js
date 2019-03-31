@@ -30,6 +30,8 @@ class ProjectCard extends Component {
       <Box
         basis="medium"
         margin="xsmall"
+        elevation="medium"
+        overflow="hidden"
         onMouseEnter={this.handleEvent}
         onMouseLeave={this.handleEvent}
         onClick={this.handleEvent}
@@ -42,11 +44,11 @@ class ProjectCard extends Component {
           <Box height="small">
             <Image src="https://via.placeholder.com/300x150" fit="cover" />
           </Box>
-          <Text size="large" weight="bold" margin={{ vertical: 'small' }}>
+          <Text size="large" weight="bold" margin="small">
             {title}
           </Text>
           <Box height="small">
-            <Text>{description}</Text>
+            <Text margin={{ horizontal: 'small' }}>{description}</Text>
           </Box>
         </OverlayLinksBox>
       </Box>

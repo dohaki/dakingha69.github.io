@@ -1,3 +1,15 @@
+const REACT = 'react';
+const GATSBY = 'gatsby';
+
+const TYPE_SCRIPT = 'typescript';
+
+const ETHEREUM = 'ethereum';
+const WEB3 = 'web3';
+const TRUFFLE = 'truffle';
+const SOLIDITY = 'solidity';
+
+const SCIENTIFIC_PAPER = 'scientific paper';
+
 export const PAGES = [
   {
     to: '/',
@@ -75,19 +87,6 @@ export const SKILLS = [
     level: 85,
   },
 ];
-
-// keywords
-const REACT = 'react';
-const GATSBY = 'gatsby';
-
-const TYPE_SCRIPT = 'typescript';
-
-const ETHEREUM = 'ethereum';
-const WEB3 = 'web3';
-const TRUFFLE = 'truffle';
-const SOLIDITY = 'solidity';
-
-const SCIENTIFIC_PAPER = 'scientific paper';
 
 export const PROJECTS = [
   {
