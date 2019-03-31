@@ -2,20 +2,20 @@ import React from 'react';
 import { Anchor, Box } from 'grommet';
 import { Github, Link, Attachment } from 'grommet-icons';
 
-const getIconOfLink = linkKey => {
-  switch (linkKey) {
-    case 'github':
-      return <Github size="large" />;
-    case 'url':
-      return <Link size="large" />;
-    case 'file':
-      return <Attachment size="large" />;
-    default:
-      break;
-  }
-};
-
 const LinkIconsBox = ({ links }) => {
+  const getIconOfLink = linkKey => {
+    switch (linkKey) {
+      case 'github':
+        return <Github size="large" />;
+      case 'url':
+        return <Link size="large" />;
+      case 'file':
+        return <Attachment size="large" />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <Box direction="row">
       {Object.keys(links).map((linkKey, i) => (
