@@ -1,6 +1,6 @@
 # dongha.kim
 
-Website for [dongha.kim](dongha.kim) based on gatsby.
+Website for [dongha.kim](https://www.dongha.kim) based on gatsby.
 
 ## Get Started
 
